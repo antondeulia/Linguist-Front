@@ -1,0 +1,30 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.input {
+	padding: 10px;
+}
+
+.buttons {
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: space-between;
+
+	.exitBtn {
+		padding: 5px 30px;
+	}
+
+	.checkBtn {
+		padding: 5px 30px;
+	}
+
+	.continueBtn {
+		padding: 5px 30px;
+		color: white;
+		background-color: green;
+	}
+}

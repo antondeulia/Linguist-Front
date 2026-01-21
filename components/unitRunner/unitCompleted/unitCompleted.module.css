@@ -1,0 +1,14 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.title {
+	font-size: 24px;
+}
+
+.buttons {
+	display: flex;
+	gap: 15px;
+}

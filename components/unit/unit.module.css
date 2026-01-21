@@ -1,0 +1,14 @@
+.unit {
+	max-width: max-content;
+	padding: 5px;
+}
+
+.completed {
+	background-color: green;
+	color: white;
+}
+
+.idle {
+	background-color: gray;
+	color: white;
+}

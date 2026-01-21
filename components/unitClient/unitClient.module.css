@@ -1,0 +1,19 @@
+.screen {
+	min-height: 100vh;
+	background: #e9e9e9;
+	transition: background-color 0.25s ease;
+}
+
+.correct {
+	background: #2ecc71;
+}
+
+.wrong {
+	background: #e74c3c;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 16px;
+}

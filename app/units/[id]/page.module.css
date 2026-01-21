@@ -1,0 +1,12 @@
+.screen {
+	min-height: 100vh;
+	background-color: gray;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
