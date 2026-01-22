@@ -1,0 +1,27 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 20px;
+
+	.title {
+		font-size: 32px;
+	}
+
+	.links {
+		display: flex;
+		gap: 20px;
+
+		.link {
+			border: 1px solid gray;
+			padding: 10px 20px;
+			min-width: 100px;
+
+			.linkTitle {
+			}
+
+			.linkText {
+			}
+		}
+	}
+}

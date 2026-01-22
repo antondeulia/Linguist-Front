@@ -1,0 +1,35 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 20px;
+
+	.title {
+		font-size: 32px;
+	}
+
+	.exams {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.exam {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			border: 1px solid gray;
+			max-width: max-content;
+			padding: 15px;
+
+			.examTitle {
+				font-weight: bold;
+			}
+
+			.examLink {
+				border: 1px solid gray;
+				padding: 5px 20px;
+				text-align: center;
+			}
+		}
+	}
+}
