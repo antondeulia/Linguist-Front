@@ -1,0 +1,13 @@
+.item {
+	border: 1px solid gray;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	.itemTitle {
+	}
+
+	.itemBtn {
+	}
+}

@@ -1,0 +1,21 @@
+.wrapper {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10;
+
+	.title {
+		font-size: 32px;
+	}
+
+	.items {
+		display: flex;
+		gap: 16px;
+
+		.item {
+			border: 1px solid gray;
+			padding: 10px 15px;
+			font-size: 18px;
+		}
+	}
+}
