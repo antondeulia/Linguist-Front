@@ -1,10 +1,5 @@
-.units {
-	background-color: rgb(127, 127, 127);
+.items {
 	display: flex;
-
-	.unit {
-		max-width: max-content;
-		padding: 5px;
-		background: yellow;
-	}
+	flex-direction: column;
+	gap: 16px;
 }

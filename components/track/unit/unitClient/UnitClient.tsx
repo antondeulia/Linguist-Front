@@ -2,8 +2,8 @@
 
 import { useUnitScreenStore } from "@/app/core/stores/unitScreenStore"
 import styles from "./unitClient.module.css"
-import UnitRunner from "@/components/unitRunner/UnitRunner"
 import { IUnit } from "@/app/core/interfaces"
+import UnitRunner from "../unitRunner/UnitRunner"
 
 export default function UnitClient({ unit }: { unit: IUnit }) {
 	const status = useUnitScreenStore(s => s.status)
@@ -18,7 +18,7 @@ export default function UnitClient({ unit }: { unit: IUnit }) {
 						: ""
 			}`}
 		>
-			<UnitRunner exercises={unit.exercises} />
+			{unit.exercises && <UnitRunner exercises={unit.exercises} />}
 		</div>
 	)
 }

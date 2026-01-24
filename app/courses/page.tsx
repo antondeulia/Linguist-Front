@@ -1,7 +1,9 @@
 import Link from "next/link"
-import { Course } from "../core/interfaces"
+import { ICourse } from "../core/interfaces"
 
-const getCourses = async (): Promise<Course[]> => {
+import styles from "./page.module.css"
+
+const getCourses = async (): Promise<ICourse[]> => {
 	try {
 		const res = await fetch("http://localhost:4200/api/courses", {
 			cache: "no-cache",
@@ -14,17 +16,19 @@ const getCourses = async (): Promise<Course[]> => {
 }
 
 export default async function Courses() {
-	const courses: Course[] = await getCourses()
+	const courses: ICourse[] = await getCourses()
 
 	return (
-		<div>
-			<h1>Courses:</h1>
+		<div className={styles.wrapper}>
+			<h1 className={styles.title}>Courses:</h1>
 
-			<ul>
-				{courses.map((course: Course) => (
-					<li key={course.id}>
-						<p>{course.name}</p>
-						<Link href={`/courses/${course.id}`}>Enroll</Link>
+			<ul className={styles.items}>
+				{courses.map((course: ICourse) => (
+					<li key={course.id} className={styles.item}>
+						<p className={styles.itemTitle}>{course.name}</p>
+						<Link href={`/courses/${course.id}`} className={styles.itemBtn}>
+							Enroll
+						</Link>
 					</li>
 				))}
 			</ul>

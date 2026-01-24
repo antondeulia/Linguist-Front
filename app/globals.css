@@ -1,73 +1,56 @@
-*,
-*::before,
-*::after {
+/* buttons */
+button {
+	all: unset;
+	cursor: pointer;
+}
+
+/* links */
+a {
+	all: unset;
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+/* lists */
+ul,
+ol {
+	all: unset;
+}
+
+/* form elements */
+input,
+textarea,
+select {
+	all: unset;
 	box-sizing: border-box;
 }
 
-* {
-	margin: 0;
+/* details / summary */
+summary {
+	all: unset;
+	cursor: pointer;
 }
 
-html {
-	-webkit-text-size-adjust: 100%;
+/* fieldset / legend */
+fieldset,
+legend {
+	all: unset;
 }
 
-body {
-	min-height: 100vh;
-	line-height: 1.5;
-	text-rendering: optimizeSpeed;
+/* table */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font-weight: inherit;
-	font-size: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
-
-ul,
-ol {
-	list-style: none;
+th,
+td {
 	padding: 0;
+	text-align: left;
 }
 
-#root,
-#__next {
-	isolation: isolate;
-}
-
-.container {
-	width: 100%;
-	max-width: 720px;
-	margin: 0 auto;
+/* focus */
+:focus {
+	outline: none;
 }

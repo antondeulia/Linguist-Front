@@ -1,5 +1,5 @@
-import { Unit } from "@/app/core/interfaces"
-import UnitClient from "@/components/unitClient/UnitClient"
+import { IUnit } from "@/app/core/interfaces"
+import UnitClient from "@/components/track/unit/unitClient/UnitClient"
 
 type PageProps = {
 	params: Promise<{
@@ -7,7 +7,7 @@ type PageProps = {
 	}>
 }
 
-const getUnit = async (id: string): Promise<Unit> => {
+const getUnit = async (id: string): Promise<IUnit> => {
 	try {
 		const res = await fetch(`http://localhost:4200/api/units/${id}`)
 
@@ -20,7 +20,7 @@ const getUnit = async (id: string): Promise<Unit> => {
 export default async function UnitPage({ params }: PageProps) {
 	const { id } = await params
 
-	const unit: Unit = await getUnit(id)
+	const unit: IUnit = await getUnit(id)
 
 	return <UnitClient unit={unit} />
 }

@@ -13,6 +13,7 @@ export default function UnitCompleted() {
 	}, [])
 
 	const handleExit = () => {
+		router.refresh()
 		router.back()
 	}
 

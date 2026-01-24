@@ -1,4 +1,4 @@
-export interface Course {
+export interface ICourse {
 	id: string
 	name: string
 	sourceLang: string
@@ -9,24 +9,20 @@ export interface Course {
 export interface ITrack {
 	id: string
 	name: string
-	courseId: string
+	isCompleted: boolean
+	isAvailable: boolean
 	units: IUnit[]
 }
 
 export interface IUnit {
 	id: string
 	name: string
-	trackId: string
-	exercises: Exercise[]
-	unitProgresses: UnitProgress[]
-}
-
-export interface UnitProgress {
-	id: string
 	isCompleted: boolean
+	isAvailable: boolean
+	exercises?: IExercise[]
 }
 
-export interface Exercise {
+export interface IExercise {
 	id: string
 	text: string
 	type: "fromSourceToTarget" | "fromTargetToSource"

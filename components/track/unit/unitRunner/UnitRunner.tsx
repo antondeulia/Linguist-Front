@@ -1,15 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import ExerciseAnswerForm from "../exerciseAnswerForm/ExerciseAnswerForm"
-import { Exercise } from "@/app/core/interfaces"
+import { IExercise } from "@/app/core/interfaces"
 import { useRouter } from "next/navigation"
 
 import styles from "./unitRunner.module.css"
 import { useUnitScreenStore } from "@/app/core/stores/unitScreenStore"
 import UnitCompleted from "./unitCompleted/UnitCompleted"
+import ExerciseAnswerForm from "@/components/exerciseAnswerForm/ExerciseAnswerForm"
 
-export default function UnitRunner({ exercises }: { exercises: Exercise[] }) {
+export default function UnitRunner({ exercises }: { exercises: IExercise[] }) {
 	const [index, setIndex] = useState(0)
 
 	const setStatus = useUnitScreenStore(s => s.setStatus)
@@ -18,7 +18,6 @@ export default function UnitRunner({ exercises }: { exercises: Exercise[] }) {
 	const current = exercises[index]
 
 	const handleComplete = ({ isCompleted }: { isCompleted: boolean }) => {
-		console.log(isCompleted)
 		setStatus(isCompleted ? "correct" : "wrong")
 	}
 

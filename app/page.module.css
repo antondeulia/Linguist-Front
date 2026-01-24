@@ -1,0 +1,31 @@
+.wrapper {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.title {
+		font-size: 32px;
+	}
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		.blockTitle {
+			font-size: 18px;
+		}
+
+		.items {
+			display: flex;
+			gap: 16px;
+
+			.item {
+				border: 1px solid gray;
+				max-width: max-content;
+				padding: 15px;
+			}
+		}
+	}
+}

@@ -10,11 +10,15 @@ type UnitProps = {
 export default function Unit({ unit }: UnitProps) {
 	return (
 		<li
-			className={`${unit.unitProgresses[0]?.isCompleted ? styles.completed : styles.idle} ${styles.unit}`}
+			className={`${styles.unit} ${
+				!unit.isAvailable
+					? styles.locked
+					: unit.isCompleted
+						? styles.completed
+						: styles.available
+			}`}
 		>
 			<Link href={`/units/${unit.id}`}>Unit: {unit.name}</Link>
-
-			{unit.unitProgresses[0]?.isCompleted ? <div>✅</div> : <div>❌</div>}
 		</li>
 	)
 }

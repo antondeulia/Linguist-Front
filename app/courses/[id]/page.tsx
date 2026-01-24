@@ -1,4 +1,5 @@
-import { Course, ITrack } from "@/app/core/interfaces"
+import { ICourse, ITrack } from "@/app/core/interfaces"
+import styles from "./page.module.css"
 import Track from "@/components/track/Track"
 
 type PageProps = {
@@ -7,7 +8,7 @@ type PageProps = {
 	}>
 }
 
-const getCourse = async (id: string): Promise<Course> => {
+const getCourse = async (id: string): Promise<ICourse> => {
 	try {
 		const res = await fetch(`http://localhost:4200/api/courses/${id}`, {
 			cache: "no-cache",
@@ -22,16 +23,11 @@ const getCourse = async (id: string): Promise<Course> => {
 export default async function CoursePage({ params }: PageProps) {
 	const { id } = await params
 
-	const course = await getCourse(id)
-
-	console.log(course)
+	const course: ICourse = await getCourse(id)
 
 	return (
 		<div>
-			<h1>{course.name}</h1>
-			<p>Описание данного суперского курса</p>
-
-			<ul>
+			<ul className={styles.items}>
 				{course.tracks.map((track: ITrack) => (
 					<Track key={track.id} track={track} />
 				))}
