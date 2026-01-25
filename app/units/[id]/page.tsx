@@ -1,5 +1,5 @@
 import { IUnit } from "@/app/core/interfaces"
-import UnitClient from "@/components/track/unit/unitClient/UnitClient"
+import UnitClient from "@/components/unit/unitClient/UnitClient"
 
 type PageProps = {
 	params: Promise<{

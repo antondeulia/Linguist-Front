@@ -1,7 +1,7 @@
 import type { ITrack, IUnit } from "@/app/core/interfaces"
 
 import styles from "./track.module.css"
-import Unit from "./unit/Unit"
+import Unit from "../unit/Unit"
 
 type TrackProps = {
 	track: ITrack
