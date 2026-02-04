@@ -1,0 +1,39 @@
+.header {
+	padding: 20px;
+	background-color: #ff9600;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20px;
+	color: white;
+	position: sticky;
+	top: 20px;
+	z-index: 999;
+	max-width: 600px;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-weight: bold;
+}
+
+.link {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 18px;
+	color: rgb(222, 222, 222);
+}
+
+.blockName {
+	font-size: 22px;
+}
+
+.poop {
+	width: 45px;
+	height: 45px;
+	border-radius: 30px;
+	background-color: white;
+}

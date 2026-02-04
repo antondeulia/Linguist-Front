@@ -1,0 +1,35 @@
+.aside {
+	width: 300px;
+	border-right: 1px solid gray;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+}
+
+.logo {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.items {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.item {
+		position: relative;
+		border: 1px solid gray;
+		padding: 16px;
+	}
+
+	.item:hover {
+		background-color: gray;
+		color: white;
+	}
+
+	.active {
+		background-color: gray;
+		color: white;
+	}
+}
