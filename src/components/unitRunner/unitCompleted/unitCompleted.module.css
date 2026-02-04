@@ -1,0 +1,25 @@
+.wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
+}
+
+.title {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.buttons {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+}
+
+.btn {
+	padding: 15px 30px;
+	border: 1px solid gray;
+}

@@ -1,0 +1,65 @@
+.unit {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	/* Контейнер теперь просто позиционирует, а не анимируется */
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 65px;
+	border-radius: 50%;
+	font-weight: bold;
+
+	transition:
+		transform 0.1s,
+		box-shadow 0.1s;
+	position: relative;
+	outline: none;
+}
+
+/* Состояния цветов */
+.available {
+	background-color: #1cb0f6;
+	color: white;
+	box-shadow: 0 8px 0 #1899d6; /* "Толщина" кнопки */
+}
+
+.completed {
+	background-color: #58cc02;
+	color: white;
+	box-shadow: 0 8px 0 #46a302;
+}
+
+.locked {
+	background-color: #e5e5e5;
+	color: #afafaf;
+	box-shadow: 0 8px 0 #afafaf;
+	cursor: default;
+}
+
+/* ЭФФЕКТЫ */
+
+/* При наведении — легкое нажатие */
+.button:not(.locked):hover {
+	transform: translateY(2px);
+}
+/* Чтобы тень не меняла цвет на белый из-за currentColor, лучше прописать явно: */
+.available:hover {
+	box-shadow: 0 6px 0 #1899d6;
+}
+.completed:hover {
+	box-shadow: 0 6px 0 #46a302;
+}
+
+/* При клике — глубокое нажатие (верх опускается к низу) */
+.button:not(.locked):active {
+	transform: translateY(6px); /* Верхняя часть уходит вниз */
+	box-shadow: 0 2px 0 #1899d6; /* Остается тонкий слой "подошвы" */
+}
+.completed:active {
+	box-shadow: 0 2px 0 #46a302;
+}

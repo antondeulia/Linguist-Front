@@ -1,0 +1,89 @@
+.section {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid gray;
+	border-radius: 15px;
+	max-width: 640px;
+	width: 100%;
+	padding: 20px;
+	align-items: center;
+}
+
+.active {
+	background: #ff64bf;
+	color: white;
+}
+
+.locked {
+	background-color: #f7f7f7;
+}
+
+.textBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.details {
+		text-transform: uppercase;
+		color: #1cb0f6;
+		font-weight: bold;
+	}
+
+	.detailsActive {
+		padding: 3px 5px;
+		background: #ff7bc9;
+		max-width: max-content;
+		color: white;
+	}
+
+	.name {
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+	.nameLocked {
+		color: gray;
+	}
+
+	.completedBlock {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		color: green;
+
+		.completedIcon {
+		}
+
+		.completedText {
+		}
+	}
+
+	.progressBarBlock {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		.continueBtn {
+			background-color: white;
+			color: #ff64bf;
+			padding: 15px 60px;
+			border-radius: 20px;
+		}
+	}
+
+	.lockedBlock {
+		color: gray;
+
+		.lockedBlockInfo {
+		}
+
+		.lockedBlockBtn {
+		}
+	}
+}
+
+.button {
+	padding: 15px 25px;
+	border: 1px solid gray;
+	border-radius: 15px;
+}
