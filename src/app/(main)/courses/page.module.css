@@ -10,25 +10,5 @@
 	.items {
 		display: flex;
 		gap: 16px;
-
-		.item {
-			border: 1px solid gray;
-			max-width: max-content;
-			padding: 15px;
-			display: flex;
-			flex-direction: column;
-			gap: 8px;
-
-			.itemTitle {
-				font-size: 18px;
-				font-weight: bold;
-			}
-
-			.itemBtn {
-				border: 1px solid gray;
-				text-align: center;
-				padding: 8px;
-			}
-		}
 	}
 }

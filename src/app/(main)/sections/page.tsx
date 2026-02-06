@@ -1,4 +1,4 @@
-import Section from "@/src/components/section/Section"
+import Section from "@/src/components/cards/sectionCard/Section"
 import styles from "./page.module.css"
 import { apiFetch } from "@/src/utils"
 import { ISection } from "@/src/core/interfaces"

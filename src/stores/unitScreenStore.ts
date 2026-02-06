@@ -15,7 +15,10 @@ type UnitScreenState = {
 	isCheckLoading: boolean
 
 	currentExerciseIndex: number
+	totalExercises: number
+	setTotalExercises: (total: number) => void
 	continue: () => void
+	reset: () => void
 }
 
 export const useUnitScreenStore = create<UnitScreenState>((set, get) => ({
@@ -63,12 +66,21 @@ export const useUnitScreenStore = create<UnitScreenState>((set, get) => ({
 	isCheckLoading: false,
 
 	currentExerciseIndex: 0,
+	totalExercises: 0,
+	setTotalExercises: (total: number) => set({ totalExercises: total }),
 	continue: () => {
 		set(state => ({
 			status: "idle",
 			inputValue: "",
 			checkResult: null,
 			currentExerciseIndex: state.currentExerciseIndex + 1,
+		}))
+	},
+
+	reset: () => {
+		set(() => ({
+			totalExercises: 0,
+			currentExerciseIndex: 0,
 		}))
 	},
 }))

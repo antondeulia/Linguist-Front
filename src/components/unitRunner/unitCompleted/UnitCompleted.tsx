@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation"
 import styles from "./unitCompleted.module.css"
 import { useEffect, useRef } from "react"
+import { useUnitScreenStore } from "@/src/stores"
 
 export default function UnitCompleted() {
 	const router = useRouter()
@@ -12,7 +13,7 @@ export default function UnitCompleted() {
 		finishRef.current?.focus()
 	}, [])
 
-	const handleExit = () => {
+	const handleExit = async () => {
 		router.refresh()
 		router.back()
 	}

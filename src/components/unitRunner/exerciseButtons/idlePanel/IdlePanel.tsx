@@ -17,6 +17,7 @@ export default function IdlePanel({ exerciseId }: Props) {
 			<button
 				className={styles.btn}
 				onClick={() => {
+					console.log("click")
 					check(exerciseId)
 				}}
 				disabled={isCheckLoading}
