@@ -10,7 +10,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 80px;
-	height: 65px;
+	height: 63px;
 	border-radius: 50%;
 	font-weight: bold;
 
@@ -21,11 +21,10 @@
 	outline: none;
 }
 
-/* Состояния цветов */
 .available {
 	background-color: #1cb0f6;
 	color: white;
-	box-shadow: 0 8px 0 #1899d6; /* "Толщина" кнопки */
+	box-shadow: 0 8px 0 #1899d6;
 }
 
 .completed {
@@ -41,24 +40,21 @@
 	cursor: default;
 }
 
-/* ЭФФЕКТЫ */
-
-/* При наведении — легкое нажатие */
 .button:not(.locked):hover {
 	transform: translateY(2px);
 }
-/* Чтобы тень не меняла цвет на белый из-за currentColor, лучше прописать явно: */
+
 .available:hover {
 	box-shadow: 0 6px 0 #1899d6;
 }
+
 .completed:hover {
 	box-shadow: 0 6px 0 #46a302;
 }
 
-/* При клике — глубокое нажатие (верх опускается к низу) */
 .button:not(.locked):active {
-	transform: translateY(6px); /* Верхняя часть уходит вниз */
-	box-shadow: 0 2px 0 #1899d6; /* Остается тонкий слой "подошвы" */
+	transform: translateY(6px);
+	box-shadow: 0 2px 0 #1899d6;
 }
 .completed:active {
 	box-shadow: 0 2px 0 #46a302;

@@ -10,7 +10,9 @@ type SidebarItem = {
 }
 
 const sidebarItems: SidebarItem[] = [
+	{ name: "Courses", href: "/courses" },
 	{ name: "Learn", href: "/learn" },
+	{ name: "Sections", href: "/sections" },
 	{ name: "Practice", href: "/practice" },
 	{ name: "Exams", href: "/exams" },
 ]

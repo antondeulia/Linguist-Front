@@ -1,5 +1,4 @@
-import Link from "next/link"
-
+import CourseCard from "@/src/components/cards/courseCard/CourseCard"
 import styles from "./page.module.css"
 import { ICourse } from "@/src/core/interfaces"
 
@@ -24,12 +23,7 @@ export default async function Courses() {
 
 			<ul className={styles.items}>
 				{courses.map((course: ICourse) => (
-					<li key={course.id} className={styles.item}>
-						<p className={styles.itemTitle}>{course.name}</p>
-						<Link href={`/courses/${course.id}`} className={styles.itemBtn}>
-							Enroll
-						</Link>
-					</li>
+					<CourseCard key={course.id} course={course} />
 				))}
 			</ul>
 		</div>

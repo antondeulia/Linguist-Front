@@ -9,7 +9,18 @@
 	position: sticky;
 	top: 20px;
 	z-index: 999;
-	max-width: 600px;
+	width: 100%;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	top: -100px;
+	left: 0;
+	right: 0;
+	height: 100px;
+	background-color: white;
+	z-index: -1;
 }
 
 .block {
@@ -27,8 +38,9 @@
 	color: rgb(222, 222, 222);
 }
 
-.blockName {
+.title {
 	font-size: 22px;
+	font-weight: 700;
 }
 
 .poop {

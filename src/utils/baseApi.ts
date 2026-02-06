@@ -5,6 +5,7 @@ type FetchOptions = RequestInit & {
 export async function apiFetch(path: string, options: FetchOptions = {}) {
 	const validPath = path.startsWith("/") ? path : "/" + path
 
+	console.log("Hi")
 	const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}${validPath}`, {
 		...options,
 		headers: {

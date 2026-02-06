@@ -1,4 +1,4 @@
-import Track from "@/src/components/track/Track"
+import Track from "@/src/components/cards/track/Track"
 import styles from "./page.module.css"
 import { ICourse, ITrack } from "@/src/core/interfaces"
 

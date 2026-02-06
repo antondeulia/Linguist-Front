@@ -2,11 +2,18 @@
 
 import { useUnitScreenStore } from "@/src/stores/unitScreenStore"
 import styles from "./wrongPanel.module.css"
+import { useEffect, useRef } from "react"
 
 export default function WrongPanel() {
 	const result = useUnitScreenStore(s => s.checkResult)
 
 	const handleContinue = useUnitScreenStore(s => s.continue)
+
+	const continueRef = useRef<HTMLButtonElement>(null)
+
+	useEffect(() => {
+		continueRef.current?.focus()
+	}, [])
 
 	return (
 		<div className={styles.wrapper}>
@@ -19,7 +26,7 @@ export default function WrongPanel() {
 					</p>
 				</div>
 			</div>
-			<button className={styles.btn} onClick={handleContinue}>
+			<button className={styles.btn} onClick={handleContinue} ref={continueRef}>
 				Continue
 			</button>
 		</div>

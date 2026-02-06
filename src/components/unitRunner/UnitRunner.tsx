@@ -3,19 +3,27 @@
 import styles from "./unitRunner.module.css"
 import UnitCompleted from "./unitCompleted/UnitCompleted"
 import { useUnitScreenStore } from "@/src/stores/unitScreenStore"
-import { IUnit } from "@/src/core/interfaces"
+import { IExercise } from "@/src/core/interfaces"
 import ExerciseAnswerForm from "./exerciseButtons/ExerciseButtons"
 import ExerciseBody from "./exerciseBody/ExerciseBody"
 import ExerciseHeader from "./exerciseHeader/ExerciseHeader"
+import { useEffect } from "react"
 
 type Props = {
-	unit: IUnit
+	exercises: IExercise[]
 }
 
-export default function UnitRunner({ unit }: Props) {
+export default function UnitRunner({ exercises }: Props) {
 	const currentExerciseIndex = useUnitScreenStore(s => s.currentExerciseIndex)
+	const setTotalExercises = useUnitScreenStore(s => s.setTotalExercises)
+	const reset = useUnitScreenStore(s => s.reset)
 
-	const currentExercise = unit.exercises[currentExerciseIndex]
+	useEffect(() => {
+		reset()
+		setTotalExercises(exercises.length)
+	}, [exercises.length])
+
+	const currentExercise = exercises[currentExerciseIndex]
 
 	if (!currentExercise) {
 		return <UnitCompleted />
